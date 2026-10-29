@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Thalita Isnaeni H</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Lexend:wght@500&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink: #f2708f;
+    --pink-light: #fde8ec;
+    --pink-line: #f6b9c7;
+    --teal: #b4d2d5;
+    --teal-light: #d3e5e7;
+    --dark: #1f2a2c;
+    --text: #3b3b3b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #e9e9e9;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+  }
+  .page {
+    position: relative;
+    width: 723px;
+    height: 1024px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+  }
+
+  /* ===== PHOTO ===== */
+  .photo {
+    position: absolute;
+    left: 46px;
+    top: -40px;
+    width: 218px;
+    height: 353px;
+    border: 5px solid var(--teal);
+    border-top: none;
+    border-radius: 0 0 110px 110px;
+    overflow: hidden;
+    background: #f4f4f4;
+  }
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* ===== HEADER ===== */
+  .first-name {
+    position: absolute;
+    left: 303px;
+    top: 38px;
+    font-family: 'Forum', serif;
+    font-size: 52px;
+    letter-spacing: 1px;
+    color: var(--dark);
+    line-height: 1;
+  }
+  .last-name {
+    position: absolute;
+    left: 303px;
+    top: 92px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 54px;
+    letter-spacing: 1px;
+    color: var(--pink);
+    line-height: 1;
+  }
+  .role {
+    position: absolute;
+    left: 305px;
+    top: 164px;
+    font-size: 13.5px;
+    letter-spacing: 3.2px;
+    line-height: 15px;
+    color: var(--dark);
+    text-transform: uppercase;
+  }
+  .role-line {
+    position: absolute;
+    left: 552px;
+    top: 180px;
+    width: 112px;
+    height: 1.5px;
+    background: var(--pink-line);
+  }
+  .summary {
+    position: absolute;
+    left: 305px;
+    top: 222px;
+    width: 374px;
+    font-size: 12.4px;
+    line-height: 18.5px;
+    text-align: justify;
+    color: var(--text);
+  }
+
+  /* ===== CONTACT BAR ===== */
+  .contact {
+    position: absolute;
+    left: 46px;
+    top: 347px;
+    width: 633px;
+    height: 35px;
+    background: var(--teal-light);
+    border-radius: 18px;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .contact .item {
+    position: absolute;
+    top: 0;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .contact svg { width: 16px; height: 16px; fill: #2b2b2b; }
+  .contact .phone { left: 26px; }
+  .contact .mail  { left: 202px; gap: 13px; }
+  .contact .loc   { left: 422px; gap: 12px; }
+
+  /* ===== RIGHT PANEL ===== */
+  .panel {
+    position: absolute;
+    left: 401px;
+    top: 405px;
+    width: 322px;
+    height: 610px;
+    background: var(--pink-light);
+    border-top-left-radius: 42px;
+  }
+  .bottom-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 14px;
+    background: var(--teal);
+  }
+
+  /* ===== COMMON ===== */
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--pink);
+    line-height: 21px;
+  }
+  .date-row {
+    display: flex;
+    align-items: center;
+    color: var(--pink);
+    font-size: 13.5px;
+    line-height: 18px;
+  }
+  .date-row .line {
+    flex: 1;
+    height: 1.5px;
+    background: var(--pink-line);
+  }
+  .job-title {
+    font-weight: 700;
+    font-size: 12.3px;
+    color: #1d1d1d;
+    margin-top: 3px;
+  }
+  ul.bullets {
+    margin-top: 10px;
+    padding-left: 23px;
+    font-size: 12.4px;
+    line-height: 18.3px;
+    text-align: justify;
+  }
+  ul.bullets li { padding-left: 0; }
+
+  /* ===== LEFT COLUMN ===== */
+  .left {
+    position: absolute;
+    left: 45px;
+    top: 418px;
+    width: 331px;
+  }
+  .left h2 { margin-bottom: 23px; }
+  .left .date-row .line { margin-left: 0; max-width: 184px; margin-left: auto; }
+  .exp { margin-bottom: 12px; }
+  .exp.gap { margin-top: 30px; }
+
+  /* ===== RIGHT COLUMN ===== */
+  .right {
+    position: absolute;
+    left: 423px;
+    top: 423px;
+    width: 256px;
+  }
+  .right h2 { margin-bottom: 18px; }
+  .right .date-row .line { margin-left: 12px; }
+  .edu-title {
+    font-weight: 700;
+    font-size: 12.3px;
+    color: #1d1d1d;
+    margin-top: 4px;
+  }
+  .edu-school {
+    font-style: italic;
+    font-size: 12.4px;
+    margin-top: 2px;
+  }
+  .edu { margin-bottom: 18px; }
+  .skills-h { margin-top: 26px; }
+  .sub-h {
+    font-weight: 700;
+    font-size: 12.3px;
+    color: #1d1d1d;
+    margin-top: -6px;
+  }
+  ul.skills {
+    margin-top: 12px;
+    padding-left: 20px;
+    font-style: italic;
+    font-size: 12.4px;
+    line-height: 18.3px;
+  }
+  .sub-h.tech { margin-top: 24px; }
+  ul.skills.tech { margin-top: 8px; max-width: 210px; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Photo -->
+    <div class="photo">
+      <img src="foto.png" alt="Thalita Isnaeni H">
+    </div>
+
+    <!-- Header -->
+    <div class="first-name">THALITA</div>
+    <div class="last-name">ISNAENI H</div>
+    <div class="role">Information System’s<br>Student</div>
+    <div class="role-line"></div>
+    <p class="summary">
+      I am a fifth-semester Information Systems student with a strong interest in Data Analytics, Data Management, and Information Technology. Skilled in data processing, database management, and analyzing data to generate meaningful insights. Familiar with SQL, Python, and data visualization tools through academic projects.
+    </p>
+
+    <!-- Contact -->
+    <div class="contact">
+      <div class="item phone">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+        <span>088213858385</span>
+      </div>
+      <div class="item mail">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span>thalitaasnh@gmail.com</span>
+      </div>
+      <div class="item loc">
+        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <span>Cempaka Putih, Jakarta Pusat</span>
+      </div>
+    </div>
+
+    <!-- Right pink panel & bottom bar -->
+    <div class="panel"></div>
+    <div class="bottom-bar"></div>
+
+    <!-- Left column: Experience -->
+    <div class="left">
+      <h2>Organization &amp; Work<br>Experience</h2>
+
+      <div class="exp">
+        <div class="date-row"><span>2026</span><span class="line"></span></div>
+        <div class="job-title">Liaison Officer | PKKMB Telkom University Jakarta</div>
+        <ul class="bullets">
+          <li>Served as the main communication link between the university committee and incoming students.</li>
+          <li>Delivered important information and provided guidance to new students throughout the orientation program.</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <div class="date-row"><span>2025 - Present</span><span class="line"></span></div>
+        <div class="job-title">Academic Division Staff | DPM TUJ</div>
+        <ul class="bullets">
+          <li>Participated in planning academic and non-academic programs to support student development.</li>
+          <li>Collaborated with team members to develop ideas and organize student activities.</li>
+        </ul>
+      </div>
+
+      <div class="exp gap">
+        <div class="date-row"><span>Mar 25 - Sep 25</span><span class="line"></span></div>
+        <div class="job-title">Fundraising Staff | INFORVATION, HIMSI</div>
+        <ul class="bullets">
+          <li>Managed fundraising activities to support event operations and financial needs.</li>
+          <li>Participated in product sales to generate additional event revenue.</li>
+          <li>Coordinated with food and beverage vendors to ensure timely arrangements.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right column: Education & Skills -->
+    <div class="right">
+      <h2>Education</h2>
+
+      <div class="edu">
+        <div class="date-row"><span>2024 - PRESENT</span><span class="line"></span></div>
+        <div class="edu-title">INFORMATION SYSTEM</div>
+        <div class="edu-school">Telkom University Jakarta</div>
+      </div>
+
+      <div class="edu">
+        <div class="date-row"><span>2022-2024</span><span class="line"></span></div>
+        <div class="edu-title">Ilmu Pengetahuan Alam</div>
+        <div class="edu-school">sMA Perguruan Ksatrya</div>
+      </div>
+
+      <h2 class="skills-h">Skills</h2>
+      <div class="sub-h">Soft Skills</div>
+      <ul class="skills">
+        <li>Effective Communication</li>
+        <li>Teamwork and Collaboration</li>
+        <li>Time Management</li>
+        <li>Problem-Solving</li>
+        <li>Analytical Thinking</li>
+      </ul>
+
+      <div class="sub-h tech">Technical Skills</div>
+      <ul class="skills tech">
+        <li>Database Fundamentals (SQL)</li>
+        <li>Basic Programming (Java, C#, Python)</li>
+        <li>Data Analysis and Data Processing</li>
+        <li>Microsoft Office (Excel, Word, PowerPoint)</li>
+        <li>Canva (Graphic Design)</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
